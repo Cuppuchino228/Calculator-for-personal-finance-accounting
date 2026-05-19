@@ -1,0 +1,26 @@
+{
+  "name": "calculator-for-personal-finance-accounting",
+  "version": "1.0.0",
+  "description": "It's nothing special, a calculator is just a regular project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cuppuchino228/Calculator-for-personal-finance-accounting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Cuppuchino228/Calculator-for-personal-finance-accounting/issues"
+  },
+  "homepage": "https://github.com/Cuppuchino228/Calculator-for-personal-finance-accounting#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "globals": "^17.6.0"
+  }
+}
