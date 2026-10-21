@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсовая: Финансы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Мой финансовый калькулятор</h1>
+
+        <div id="message" class="message"></div>
+
+        <section class="form-block">
+            <h3>Добавить запись</h3>
+            <input type="number" id="amount" placeholder="Сумма (руб)" step="0.01">
+            
+            <select id="type">
+                <option value="income">Доход</option>
+                <option value="expense">Расход</option>
+            </select>
+
+            <select id="category">
+                <option value="Еда">Еда</option>
+                <option value="Транспорт">Транспорт</option>
+                <option value="Жильё">Жильё</option>
+                <option value="Развлечения">Развлечения</option>
+                <option value="Здоровье">Здоровье</option>
+                <option value="Другое">Другое</option>
+            </select>
+
+            <input type="date" id="date">
+            <input type="text" id="comment" placeholder="Комментарий (необязательно)">
+            
+            <button onclick="addTransaction()">Добавить транзакцию</button>
+        </section>
+
+        <section class="filters">
+            <label>Тип: 
+                <select id="filterType">
+                    <option value="all">Все</option>
+                    <option value="income">Доходы</option>
+                    <option value="expense">Расходы</option>
+                </select>
+            </label>
+            <label>Период: 
+                <select id="filterPeriod">
+                    <option value="all">За все время</option>
+                    <option value="week">Неделя</option>
+                    <option value="month">Месяц</option>
+                </select>
+            </label>
+            <button onclick="applyFilters()">Применить</button>
+            <button onclick="resetFilters()" style="background: #ccc;">Сброс</button>
+        </section>
+
+        <section class="stats">
+            <div><strong>Баланс:</strong> <span id="balance">0 ₽</span></div>
+            <div><strong>Доходы:</strong> <span id="incomeTotal">0 ₽</span></div>
+            <div><strong>Расходы:</strong> <span id="expenseTotal">0 ₽</span></div>
+            
+            <h4>График расходов (текстовый):</h4>
+            <pre id="chart"></pre>
+        </section>
+
+        <section class="table-block">
+            <h3>История операций</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Тип</th>
+                        <th>Категория</th>
+                        <th>Сумма</th>
+                        <th>Комментарий</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionsList">
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
